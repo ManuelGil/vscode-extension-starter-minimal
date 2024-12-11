@@ -1,0 +1,104 @@
+{
+	"name": "vscode-extension-starter-minimal",
+	"displayName": "My Extension",
+	"description": "My First Extension for Visual Studio Code",
+	"version": "1.0.0",
+	"preview": true,
+	"icon": "icon.png",
+	"galleryBanner": {
+		"color": "#eff1f3",
+		"theme": "dark"
+	},
+	"pricing": "Free",
+	"license": "MIT",
+	"publisher": "extensionPublisher",
+	"author": "githubUsername",
+	"sponsor": {
+		"url": "https://github.com/sponsors/githubUsername"
+	},
+	"engines": {
+		"vscode": "^1.76.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"boilerplate",
+		"extension",
+		"kit",
+		"minimal",
+		"plugin",
+		"project",
+		"starter-kit",
+		"starter",
+		"starter",
+		"template",
+		"typescript",
+		"vscode",
+		"vsxpert"
+	],
+	"homepage": "https://github.com/githubUsername/vscode-extension-starter-minimal",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/githubUsername/vscode-extension-starter-minimal"
+	},
+	"bugs": {
+		"url": "https://github.com/githubUsername/vscode-extension-starter-minimal/issues"
+	},
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "My Extension Configuration",
+			"properties": {
+				"extensionIdentifier.enable": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable or disable My Extension functionality."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "extensionIdentifier.helloWorld",
+				"title": "Hello World",
+				"category": "My Extension"
+			}
+		],
+		"jsonValidation": [
+			{
+				"fileMatch": ".vscode/settings.json",
+				"url": "./schemas/config.schema.json"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "rimraf out && tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"format": "biome format --write",
+		"lint": "biome lint --write",
+		"lint:check": "biome check --write",
+		"test": "node ./out/test/runTest.js",
+		"compodoc": "npx compodoc -p tsconfig.doc.json -d compodoc --theme readthedocs -s",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@commitlint/cli": "^19.5.0",
+		"@commitlint/config-conventional": "^19.5.0",
+		"@compodoc/compodoc": "^1.1.26",
+		"@types/babel__traverse": "^7.20.6",
+		"@types/mocha": "^10.0.9",
+		"@types/node": "^22.9.0",
+		"@types/vscode": "^1.76.0",
+		"glob": "^11.0.0",
+		"husky": "^9.1.6",
+		"lint-staged": "^15.2.10",
+		"mocha": "^10.8.2",
+		"rimraf": "^6.0.1",
+		"typescript": "^5.6.3",
+		"vscode-test": "^1.6.1"
+	}
+}

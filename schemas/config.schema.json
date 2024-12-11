@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"extensionIdentifier.enable": {
+			"type": "boolean",
+			"default": true,
+			"description": "Enable or disable My Extension functionality."
+		},
+		"extensionIdentifier.highlightUnusedVariables": {
+			"type": "boolean",
+			"default": true,
+			"description": "Highlight unused variables in the editor."
+		},
+		"extensionIdentifier.autoOptimizeImports": {
+			"type": "boolean",
+			"default": false,
+			"description": "Automatically optimize imports on save."
+		},
+		"extensionIdentifier.consoleLogLevel": {
+			"type": "string",
+			"enum": ["log", "warn", "error", "info", "all"],
+			"default": "all",
+			"description": "Specify which console logs to highlight."
+		}
+	}
+}
