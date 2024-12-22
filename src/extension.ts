@@ -6,7 +6,9 @@ import * as vscode from 'vscode';
 import {
   EXTENSION_DISPLAY_NAME,
   EXTENSION_ID,
+  EXTENSION_NAME,
   ExtensionConfig,
+  USER_PUBLISHER,
 } from './app/configs';
 import { CommandHandlerController } from './app/controllers';
 
@@ -68,7 +70,7 @@ export async function activate(context: vscode.ExtensionContext) {
   // Check if the extension is running for the first time
   if (!previousVersion) {
     vscode.window.showInformationMessage(
-      `Welcome to ${EXTENSION_DISPLAY_NAME}!`,
+      `Welcome to ${EXTENSION_DISPLAY_NAME}! The extension is now active`,
     );
 
     // Update the version in the global state
@@ -77,7 +79,30 @@ export async function activate(context: vscode.ExtensionContext) {
 
   // Check if the extension has been updated
   if (previousVersion && previousVersion !== currentVersion) {
-    vscode.window.showInformationMessage(`Updated to ${currentVersion}!`);
+    const actions: vscode.MessageItem[] = [
+      {
+        title: 'Release Notes',
+      },
+      {
+        title: 'Close',
+      },
+    ];
+
+    const option = await vscode.window.showInformationMessage(
+      `New version of ${EXTENSION_DISPLAY_NAME} is available. Check out the release notes for version ${currentVersion}!`,
+      ...actions,
+    );
+
+    // Handle the actions
+    switch (option?.title) {
+      case actions[0].title:
+        vscode.env.openExternal(
+          vscode.Uri.parse(
+            `https://marketplace.visualstudio.com/items/${USER_PUBLISHER}.${EXTENSION_NAME}/changelog`,
+          ),
+        );
+        break;
+    }
 
     // Update the version in the global state
     context.globalState.update('version', currentVersion);

@@ -46,6 +46,6 @@ export class ExtensionConfig {
    * @memberof Config
    */
   constructor(readonly config: WorkspaceConfiguration) {
-    this.enable = config.get<boolean>('enable') ?? DEFAULT_ENABLE;
+    this.enable = config.get<boolean>('enable', DEFAULT_ENABLE);
   }
 }

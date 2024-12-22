@@ -17,7 +17,7 @@
 		"url": "https://github.com/sponsors/githubUsername"
 	},
 	"engines": {
-		"vscode": "^1.76.0"
+		"vscode": "^1.88.0"
 	},
 	"categories": [
 		"Other"
@@ -80,25 +80,24 @@
 		"format": "biome format --write",
 		"lint": "biome lint --write",
 		"lint:check": "biome check --write",
-		"test": "node ./out/test/runTest.js",
+		"test": "vscode-test",
 		"compodoc": "npx compodoc -p tsconfig.doc.json -d compodoc --theme readthedocs -s",
 		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@commitlint/cli": "^19.5.0",
-		"@commitlint/config-conventional": "^19.5.0",
+		"@commitlint/cli": "^19.6.1",
+		"@commitlint/config-conventional": "^19.6.0",
 		"@compodoc/compodoc": "^1.1.26",
-		"@types/babel__traverse": "^7.20.6",
-		"@types/mocha": "^10.0.9",
+		"@types/mocha": "^10.0.10",
 		"@types/node": "^22.9.0",
-		"@types/vscode": "^1.76.0",
+		"@types/vscode": "^1.88.0",
+		"@vscode/test-cli": "^0.0.10",
+		"@vscode/test-electron": "^2.4.1",
 		"glob": "^11.0.0",
-		"husky": "^9.1.6",
-		"lint-staged": "^15.2.10",
-		"mocha": "^10.8.2",
+		"husky": "^9.1.7",
+		"lint-staged": "^15.2.11",
 		"rimraf": "^6.0.1",
-		"typescript": "^5.6.3",
-		"vscode-test": "^1.6.1"
+		"typescript": "^5.7.2"
 	}
 }
