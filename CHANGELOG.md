@@ -7,11 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2024-12-22
+
+### Added
+
+- Add VS Code test configuration and update test scripts
+
+### Changed
+
+- Improve the welcome and update messages in the extension
+- Upgrade dependencies to the latest versions available
+
 ## [1.0.0] - 2024-12-11
 
 ### Added
 
 - Initial release of the extension starter kit minimal.
 
-[unreleased]: https://github.com/ManuelGil/vscode-extension-starter-minimal/compare/v1.9.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-extension-starter-minimal/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/ManuelGil/vscode-extension-starter-minimal/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/ManuelGil/vscode-extension-starter-minimal/releases/tag/v1.0.0
