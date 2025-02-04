@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2025-02-03
+
+### Changed
+
+- Update repository URL constants and improve message handling
+
 ## [1.1.0] - 2024-12-22
 
 ### Added
@@ -24,6 +30,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release of the extension starter kit minimal.
 
-[unreleased]: https://github.com/ManuelGil/vscode-extension-starter-minimal/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/ManuelGil/vscode-extension-starter-minimal/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/ManuelGil/vscode-extension-starter-minimal/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/ManuelGil/vscode-extension-starter-minimal/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/ManuelGil/vscode-extension-starter-minimal/releases/tag/v1.0.0
